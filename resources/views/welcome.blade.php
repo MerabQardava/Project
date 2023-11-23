@@ -20,8 +20,12 @@
         <div>
             <h2>{{ $quiz->name }}</h2>
             <p>{{ $quiz->description }}</p>
+            
+            
         </div>
     @endforeach
+    <br>
+    <a href="http://127.0.0.1:8000/quizzes" style="color:red;">CRUD</a>
 
     </body>
 </html>

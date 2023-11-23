@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->text("description");
+            $table->string('name');
+
+            $table->text('description')->nullable();
+            $table->text('photo')->nullable();
+            $table->boolean('active')->default(false);
             $table->timestamps();
         });
     }

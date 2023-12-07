@@ -1,7 +1,7 @@
 <?php
 
 namespace Database\Seeders;
-
+use App\Models\quiz;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,14 +13,16 @@ class QuizSeeder extends Seeder
      */
     public function run(): void
     {
+        quiz::factory(20)->create();
         //
-        DB::table('quizzes')->insert([
-            ['name' => 'qvizi 1', 'description' => 'qvizi 1'],
-            ['name' => 'qvizi 2', 'description' => 'qvizi 2'],
-            ['name' => 'qvizi 3', 'description' => 'qvizi 3'],
-            ['name' => 'qvizi 4', 'description' => 'qvizi 4'],
-            ['name' => 'qvizi 5', 'description' => 'qvizi 5'],
+        // DB::table('quizzes')->insert([
+            // ['name' => 'qvizi 1', 'description' => 'qvizi 1'],
+            // ['name' => 'qvizi 2', 'description' => 'qvizi 2'],
+            // ['name' => 'qvizi 3', 'description' => 'qvizi 3'],
+            // ['name' => 'qvizi 4', 'description' => 'qvizi 4'],
+            // ['name' => 'qvizi 5', 'description' => 'qvizi 5'],
+            
 
-        ]);
+        // ]);
     }
 }

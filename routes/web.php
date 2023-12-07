@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\QuizController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::middleware('merab')->group(function () {
+    Route::get('/merab', function () {
+        return "test";
+    });
+});
+
+Route::get('/quizzes', [QuizController::class, 'index']);
+Route::get('/quiz/{id?}', [QuizController::class, 'edit'])->name('quiz.edit');
+Route::post('/quiz/{id?}', [QuizController::class, 'store']);
